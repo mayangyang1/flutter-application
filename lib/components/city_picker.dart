@@ -86,7 +86,7 @@ class _CityPickerState extends State<CityPicker> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: ScreenUtil().setHeight(640),
+      height: ScreenUtil().setHeight(580),
       child: DefaultTextStyle(
         style: TextStyle(
           fontSize: ScreenUtil().setSp(36),
@@ -140,7 +140,7 @@ class _CityPickerState extends State<CityPicker> {
                       key: Key('province'),
                       createWidgetList: (){
                         return province.map((v){
-                          return Text(v['chineseShortName'],style: TextStyle(height: 1.7),);
+                          return Center(child: Text(v['chineseShortName'],),);
                         }).toList();
                       },
                       change: (index) {
@@ -167,7 +167,7 @@ class _CityPickerState extends State<CityPicker> {
                       key: Key('city'),
                       createWidgetList: (){
                         return city.map((v){
-                          return Text(v['chineseShortName'],style: TextStyle(height: 1.7));
+                          return Center(child: Text(v['chineseShortName'],),);
                         }).toList();
                       },
                       change: (index) {
@@ -192,7 +192,7 @@ class _CityPickerState extends State<CityPicker> {
                         key: Key('area'),
                         createWidgetList: (){
                           return area.map((v){
-                            return Text(v['chineseShortName'],style: TextStyle(height: 1.7));
+                            return Center(child: Text(v['chineseShortName'],),);
                           }).toList();
                         },
                         change: (index) {
@@ -242,7 +242,11 @@ class _CommonPickerState extends State<CommonPicker> {
       child: CupertinoPicker(
         key: widget.key,
         scrollController: widget.controller,
-        itemExtent: 40.0,
+        itemExtent:40.0,
+        useMagnifier: true,
+        magnification: 1.0,
+        diameterRatio: 360.0,
+        offAxisFraction: 100.0,
         backgroundColor: Colors.white,
         onSelectedItemChanged: (index){
           if(widget.change != null) {
@@ -251,7 +255,7 @@ class _CommonPickerState extends State<CommonPicker> {
         },
         children: widget.createWidgetList().length > 0
         ? widget.createWidgetList()
-        : [Text('请选择',style: TextStyle(height: 1.7))]
+        : [Center(child: Text('请选择',))]
       )
     );
   }

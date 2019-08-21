@@ -246,24 +246,29 @@ class _WorkBenchPageState extends State<WorkBenchPage>  {
         color: Colors.white,
         child: InkWell(
           child: Container(
-            padding: EdgeInsets.only(top: 15,bottom:15),
+            padding: EdgeInsets.only(top: 15,),
             width: MediaQuery.of(context).size.width/4,
-            height: ScreenUtil().setHeight(200),
+            // height: ScreenUtil().setHeight(180),
             decoration: BoxDecoration(
               border: Border(right: BorderSide(width: 1, color: Color(0xFFF2F2F2)),bottom: BorderSide(width: 1, color: Color(0xFFF2F2F2)))
             ),
-            child: Column(
-              children: <Widget>[
-                imgUrl != ''
-                ? Image.asset('assets/images/$imgUrl.png',width: ScreenUtil().setWidth(65),height: ScreenUtil().setHeight(65),)
-                : Container(
-                  width: ScreenUtil().setWidth(65),
-                  height: ScreenUtil().setHeight(65),
-                  child: null,
-                ),
-                Padding(child: null,padding: EdgeInsets.only(top: 10),),
-                Text(title)
-              ],
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                minHeight: ScreenUtil().setHeight(140)
+              ),
+              child: Column(
+                children: <Widget>[
+                  imgUrl != ''
+                  ? Image.asset('assets/images/$imgUrl.png',width: ScreenUtil().setWidth(65),height: ScreenUtil().setHeight(65),)
+                  : Container(
+                    width: ScreenUtil().setWidth(65),
+                    height: ScreenUtil().setHeight(65),
+                    child: null,
+                  ),
+                  Padding(child: null,padding: EdgeInsets.only(top: 10),),
+                  Text(title)
+                ],
+              ),
             ),
           ),
           onTap: () {

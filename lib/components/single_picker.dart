@@ -35,7 +35,7 @@ class _CommonPickerState extends State<CommonPicker> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: ScreenUtil().setHeight(640),
+      height: ScreenUtil().setHeight(580),
       child: DefaultTextStyle(
         style: TextStyle(
           fontSize: ScreenUtil().setSp(36),
@@ -91,9 +91,9 @@ class _CommonPickerState extends State<CommonPicker> {
     return CupertinoPicker(
       children: singlePickerList.length > 0
       ? singlePickerList.map((v){
-          return Text(v['key'],style: TextStyle(height: 1.8));
+          return Center(child: Text(v['key']),);
         }).toList()
-      : [ Text('暂无数据',style: TextStyle(height: 1.8))],
+      : [ Center(child: Text('暂无数据'),)],
       itemExtent: 38.0,
       backgroundColor: Colors.white,
       diameterRatio: 38.0,

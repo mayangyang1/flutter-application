@@ -143,14 +143,7 @@ packages:
       name: shared_preferences
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.5.2"
-  simple_permissions:
-    dependency: "direct main"
-    description:
-      name: simple_permissions
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.1.9"
+    version: "0.5.3"
   sky_engine:
     dependency: transitive
     description: flutter
