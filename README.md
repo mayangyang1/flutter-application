@@ -1,4 +1,4 @@
-## 项目截图
+## 项目部分截图
 
 <div align=center>
   <img src="https://github.com/mayangyang1/flutter-application/raw/master/assets/examples/example1.jpg" width = "400"  alt="图片名称" align="center" />
