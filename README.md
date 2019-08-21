@@ -2,7 +2,7 @@
 
 <div align=center>
   <img src="https://github.com/mayangyang1/flutter-application/raw/master/assets/examples/example1.jpg" width = "340"  alt="图片名称" align="center" />
-  <span style="margin-left:10px;"></span>
+  <span style="margin-left:10px;"> </span>
   <img src="https://github.com/mayangyang1/flutter-application/raw/master/assets/examples/example2.jpg" width = "340"  alt="图片名称" align="center" />
 </div></br></br>
 <div align=center>
