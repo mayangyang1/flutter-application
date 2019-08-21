@@ -38,4 +38,10 @@
   </div></br></br>
 <div align=center>
   <img src="https://github.com/mayangyang1/flutter-application/raw/master/assets/examples/example13.jpg" width = "400"  alt="图片名称" align="center" />
+   </div></br></br>
+<div align=center>
+  <img src="https://github.com/mayangyang1/flutter-application/raw/master/assets/examples/example14.jpg" width = "400"  alt="图片名称" align="center" />
+   </div></br></br>
+<div align=center>
+  <img src="https://github.com/mayangyang1/flutter-application/raw/master/assets/examples/example15.jpg" width = "400"  alt="图片名称" align="center" />
 </div>
